@@ -142,6 +142,28 @@ lemonTartRecipe.Measure = new TartMeasure
     Height = 2.5
 };
 
+
+Recipe lemonTartRecipe2 = new Recipe();
+lemonTartRecipe2.Name = "Lemon Tart2";
+lemonTartRecipe2.Id = "57c2b8cc-756d-4d02-9a3f-dea664fc5165";
+lemonTartRecipe2.Measure = new TartMeasure
+{
+    Radius = 22,
+    Height = 3
+};
+
+lemonTartRecipe2.SubComponents = new List<ComponentRef>()
+{
+    new ComponentRef()
+    {
+        Id = "43454f1b-b030-46c1-b1c9-02109857794e",
+        RefId = lemonTartRecipe.Id,
+        Transformation = new TartRetargetTransformation(lemonTartRecipe.Measure as TartMeasure, lemonTartRecipe2.Measure as TartMeasure)
+    }
+};
+
+
+
 lemonTartRecipe.SubComponents = new List<ComponentRef>
 {
    
@@ -161,6 +183,7 @@ RecipeMaster rm = new RecipeMaster
     Recipes = new List<Recipe>
     {
         lemonTartRecipe,
+        lemonTartRecipe2,
         lemonCurd,
         pastryDough
     },
@@ -176,13 +199,17 @@ RecipeMaster rm = new RecipeMaster
 };
 
 rm.Build();
-//rm.PrintRecipe(lemonTartRecipe);
-pastryDough.PrintBasicRecipe();
-//lemonTartRecipe.PrintBasicRecipe();
-var set = new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore};
-set.Converters.Add(new StringEnumConverter());
-Console.WriteLine(JsonConvert.SerializeObject(rm, Formatting.None, set));
 
+lemonTartRecipe2.PrintBasicRecipe();
+
+
+
+//rm.PrintRecipe(lemonTartRecipe);
+//pastryDough.PrintBasicRecipe();
+//lemonTartRecipe.PrintBasicRecipe();
+//var set = new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore};
+//set.Converters.Add(new StringEnumConverter());
+//Console.WriteLine(JsonConvert.SerializeObject(rm, Formatting.None, set));
 
 
 
