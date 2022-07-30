@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeMaster.Entities", "Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeMaster.Logic", "RecipeMaster.Logic\RecipeMaster.Logic.csproj", "{47801F48-DB8C-4332-8D48-B9336EEBFD0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeMaster.Api", "RecipeMaster.Api\RecipeMaster.Api.csproj", "{7B67097B-8A1A-4544-8283-CD04121457F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeMasterTool3", "RecipeMasterTool3\RecipeMasterTool3.csproj", "{FEE2C6AE-7F50-466D-8787-496A955E7E7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{47801F48-DB8C-4332-8D48-B9336EEBFD0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47801F48-DB8C-4332-8D48-B9336EEBFD0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47801F48-DB8C-4332-8D48-B9336EEBFD0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B67097B-8A1A-4544-8283-CD04121457F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B67097B-8A1A-4544-8283-CD04121457F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B67097B-8A1A-4544-8283-CD04121457F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B67097B-8A1A-4544-8283-CD04121457F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE2C6AE-7F50-466D-8787-496A955E7E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE2C6AE-7F50-466D-8787-496A955E7E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE2C6AE-7F50-466D-8787-496A955E7E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE2C6AE-7F50-466D-8787-496A955E7E7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

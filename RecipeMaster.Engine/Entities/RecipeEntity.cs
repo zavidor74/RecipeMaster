@@ -11,12 +11,14 @@ public abstract class RecipeEntity
 {
     public string Id { get; set; }
 
-    public string Name { get; set; }
+    public virtual string Name { get; set; }
 
     public string Description { get; set; }
 
     [JsonIgnore]
     public abstract HashSet<string> TotalFlavors { get; }
+
+    [JsonIgnore] public virtual string FinalName => Name;
 
     public abstract Measure GetMeasure();
 

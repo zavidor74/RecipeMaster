@@ -18,6 +18,8 @@ public class ComponentRef : RecipeEntity
 
     public override HashSet<string> TotalFlavors => RemoteEntity.TotalFlavors;
 
+    public override string FinalName => GetComponentName();
+
     public override Measure GetMeasure()
     {
         if (Transformation == null)
