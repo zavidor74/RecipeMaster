@@ -19,6 +19,7 @@ namespace RecipeMaster1.Entities
         public Measure Measure { get; set; }
 
         public Texture Texture { get; set; }
+
         public RecipeType RecipeType { get; set; }
 
         public string GenerateDetailedDescription()
@@ -26,20 +27,23 @@ namespace RecipeMaster1.Entities
             return string.Empty;
         }
 
-        public override List<Flavor> Flavors {
+        public override HashSet<string> TotalFlavors {
             get
             {
                 HashSet<string> flavors = new HashSet<string>();
                 foreach (var component in SubComponents)
                 {
-                    foreach (var flavor in component.Flavors)
+                    if (component.TotalFlavors != null)
                     {
-                        flavors.Add(flavor);
+                        foreach (var flavor in component.TotalFlavors)
+                        {
+                            flavors.Add(flavor);
+                        }
                     }
                 }
 
                 return flavors;
-            };
+            }
         }
 
         public override Measure GetMeasure()
@@ -77,6 +81,15 @@ namespace RecipeMaster1.Entities
         {
             Console.WriteLine(Name);
             Console.WriteLine($"Target measure: {Measure.Description}");
+            Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==");
+            Console.WriteLine("= Total Flavors:");
+            Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==");
+
+            foreach (var flavorId in TotalFlavors)
+            {
+                Console.WriteLine(RecipeMaster.Instance.Flavors.Single(flv => flv.Id == flavorId).Name);
+            }
+
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==");
             Console.WriteLine("= Ingredients:");
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==");

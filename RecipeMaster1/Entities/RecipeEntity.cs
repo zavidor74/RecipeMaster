@@ -16,7 +16,7 @@ public abstract class RecipeEntity
     public string Description { get; set; }
 
     [JsonIgnore]
-    public abstract List<Flavor> Flavors { get; }
+    public abstract HashSet<string> TotalFlavors { get; }
 
     public abstract Measure GetMeasure();
 

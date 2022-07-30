@@ -6,13 +6,11 @@ using RecipeMaster1;
 using RecipeMaster1.Entities;
 using RecipeMaster1.Entities.Transformations;
 
-Console.WriteLine("Hello, World!");
-
 Flavor lemon = new Flavor()
 {
     Id = "812f337d-88c7-4260-bd33-6a8951cee96f",
     Name = "Lemon",
-    FlavorProperties = new List<FlavorProperty> { FlavorProperty.Acidic, FlavorProperty.Citrus };
+    FlavorProperties = new List<FlavorProperty>() { FlavorProperty.Acidic, FlavorProperty.Citrus }
 };
 
     Ingredient flour = new Ingredient
@@ -55,7 +53,7 @@ Ingredient lemonJuice = new Ingredient
     Id = "824f1995-6e11-4459-ab44-8596800e0fb5",
     Name = "Lemon Juice",
     UnitType = UnitType.Gram,
-    Flavors = new List<string>() { "812f337d-88c7-4260-bd33-6a8951cee96f" };
+    Flavors = new HashSet<string>() { "812f337d-88c7-4260-bd33-6a8951cee96f" }
 };
 
 Recipe pastryDough = new Recipe()
@@ -178,7 +176,15 @@ lemonTartRecipe2.SubComponents = new List<ComponentRef>()
 
 lemonTartRecipe.SubComponents = new List<ComponentRef>
 {
-   
+    new ComponentRef
+    {
+        Id = "6e09fdc8-e334-438a-b58b-d8db67204198",
+        RefId = lemonCurd.Id,
+        Transformation = new MultiplyTransformation()
+        {
+            Multiplier = 0.5
+        }
+    },
     new ComponentRef
     {
         Id = "1ec7a68d-558b-4e77-b5e8-1d2a8c00f7e9",
@@ -190,35 +196,30 @@ lemonTartRecipe.SubComponents = new List<ComponentRef>
     }
 };
 
-RecipeMaster rm = new RecipeMaster
+RecipeMaster.Instance.Recipes = new List<Recipe>
 {
-    Recipes = new List<Recipe>
-    {
-        lemonTartRecipe,
-        lemonTartRecipe2,
-        lemonCurd,
-        pastryDough
-    },
-    Ingredients = new List<Ingredient>
-    {
-        flour,
-        sugarPowder,
-        salt,
-        butter,
-        egg,
-        lemonJuice
-    }
+    lemonTartRecipe,
+    lemonTartRecipe2,
+    lemonCurd,
+    pastryDough
+};
+RecipeMaster.Instance.Ingredients = new List<Ingredient>
+{
+    flour,
+    sugarPowder,
+    salt,
+    butter,
+    egg,
+    lemonJuice
+};
+RecipeMaster.Instance.Flavors = new List<Flavor>
+{
+    lemon
 };
 
-rm.Build();
+RecipeMaster.Instance.Build();
 
 lemonTartRecipe2.PrintBasicRecipe();
-
-public enum FlavorProperty
-{
-    Acidic,
-    Citrus
-}
 
 
 //rm.PrintRecipe(lemonTartRecipe);

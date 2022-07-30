@@ -6,11 +6,24 @@ using RecipeMaster1.Entities;
 
 namespace RecipeMaster1;
 
-public class RecipeMaster 
+using Entities.Transformations;
+
+public class RecipeMaster
 {
+    private static Lazy<RecipeMaster> _instance = new Lazy<RecipeMaster>(() => new RecipeMaster());
+
+    public static RecipeMaster Instance => _instance.Value;
+
+    private RecipeMaster()
+    {
+        
+    }
+
     public List<Recipe> Recipes { get; set; }
 
     public List<Ingredient> Ingredients { get; set; }
+
+    public List<Flavor> Flavors { get; set; }
 
     private Dictionary<string, RecipeEntity> m_entities;
 

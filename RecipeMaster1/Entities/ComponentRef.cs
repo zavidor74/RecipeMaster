@@ -16,13 +16,7 @@ public class ComponentRef : RecipeEntity
     [JsonIgnore]
     public RecipeEntity RemoteEntity { get; set; }
 
-    public List<Flavor> Flavors
-    {
-        get
-        {
-            return RemoteEntity.Flavors;
-        }
-    }
+    public override HashSet<string> TotalFlavors => RemoteEntity.TotalFlavors;
 
     public override Measure GetMeasure()
     {
