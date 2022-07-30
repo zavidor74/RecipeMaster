@@ -4,6 +4,7 @@
 
 namespace RecipeMaster1.Entities;
 
+using global::RecipeMaster.Engine.Types;
 using Newtonsoft.Json;
 
 public class Measure

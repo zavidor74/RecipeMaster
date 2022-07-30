@@ -6,7 +6,7 @@ namespace RecipeMaster1.Entities.Transformations;
 
 public class MultiplyTransformation : Transformation
 {
-    public double Multiplier { get; set; }
+    public virtual double Multiplier { get; set; }
 
     public override Measure GetMeasure(Measure m)
     {

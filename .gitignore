@@ -5,3 +5,7 @@
 /.vs
 /RecipeMaster1/obj
 /RecipeMaster1/bin/Debug/net6.0
+/RecipeMaster.Engine/obj
+/RecipeMasterDatabase/bin/Debug/net6.0
+/RecipeMasterDatabase/obj
+/RecipeMaster.Engine/bin/Debug/net6.0

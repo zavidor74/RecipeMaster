@@ -2,6 +2,7 @@
 //    Copyright (c) Microsoft Corporation. All rights reserved.
 // </copyright>
 
+using RecipeMaster.Engine.Types;
 using RecipeMaster1.Entities.Transformations;
 
 namespace RecipeMaster1.Entities;

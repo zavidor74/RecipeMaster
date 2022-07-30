@@ -14,9 +14,10 @@ public class TartMeasure : Measure
 
     public TartMeasure()
     {
-        UnitType = UnitType.Volume;
+        UnitType = global::RecipeMaster.Engine.Types.UnitType.Volume;
     }
 
+    [JsonIgnore]
     public override double Amount
     {
         get

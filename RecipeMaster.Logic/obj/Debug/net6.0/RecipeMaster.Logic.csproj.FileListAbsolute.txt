@@ -1,0 +1,17 @@
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\RecipeMaster.Logic.csproj.AssemblyReference.cache
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\RecipeMaster.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\RecipeMaster.Logic.AssemblyInfoInputs.cache
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\RecipeMaster.Logic.AssemblyInfo.cs
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\RecipeMaster.Logic.csproj.CoreCompileInputs.cache
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\bin\Debug\net6.0\RecipeMaster.Logic.deps.json
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\bin\Debug\net6.0\RecipeMaster.Logic.dll
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\bin\Debug\net6.0\RecipeMaster.Logic.pdb
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\bin\Debug\net6.0\RecipeMaster.Entities.dll
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\bin\Debug\net6.0\RecipeMasterDatabase.dll
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\bin\Debug\net6.0\RecipeMaster.Entities.pdb
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\bin\Debug\net6.0\RecipeMasterDatabase.pdb
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\RecipeMaster.Logic.csproj.CopyComplete
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\RecipeMaster.Logic.dll
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\refint\RecipeMaster.Logic.dll
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\RecipeMaster.Logic.pdb
+C:\Users\zavidor\source\repos\RecipeMaster1\RecipeMaster.Logic\obj\Debug\net6.0\ref\RecipeMaster.Logic.dll

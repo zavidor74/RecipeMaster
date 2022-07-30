@@ -2,7 +2,7 @@
 //    Copyright (c) Microsoft Corporation. All rights reserved.
 // </copyright>
 
-namespace RecipeMaster1.Entities;
+namespace RecipeMaster.Engine.Types;
 
 public enum UnitType
 {
