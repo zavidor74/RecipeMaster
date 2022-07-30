@@ -2,7 +2,7 @@
 //    Copyright (c) Microsoft Corporation. All rights reserved.
 // </copyright>
 
-namespace RecipeMaster1;
+namespace RecipeMaster1.Entities;
 
 using Newtonsoft.Json;
 
@@ -21,7 +21,7 @@ public class Measure
         }
     }
 
-    public static Measure operator+(Measure measureA, Measure measureB)
+    public static Measure operator +(Measure measureA, Measure measureB)
     {
         if (measureA.UnitType == measureB.UnitType)
         {

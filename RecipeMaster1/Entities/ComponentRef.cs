@@ -2,9 +2,10 @@
 //    Copyright (c) Microsoft Corporation. All rights reserved.
 // </copyright>
 
-namespace RecipeMaster1;
+namespace RecipeMaster1.Entities;
 
 using Newtonsoft.Json;
+using RecipeMaster1.Entities.Transformations;
 
 public class ComponentRef : RecipeEntity
 {
@@ -14,6 +15,14 @@ public class ComponentRef : RecipeEntity
 
     [JsonIgnore]
     public RecipeEntity RemoteEntity { get; set; }
+
+    public List<Flavor> Flavors
+    {
+        get
+        {
+            return RemoteEntity.Flavors;
+        }
+    }
 
     public override Measure GetMeasure()
     {

@@ -2,14 +2,14 @@
 //    Copyright (c) Microsoft Corporation. All rights reserved.
 // </copyright>
 
-namespace RecipeMaster1;
+namespace RecipeMaster1.Entities;
 
 using Newtonsoft.Json;
 
 public class TartMeasure : Measure
 {
     public double Radius { get; set; }
-        
+
     public double Height { get; set; }
 
     public TartMeasure()

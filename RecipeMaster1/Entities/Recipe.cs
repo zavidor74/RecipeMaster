@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipeMaster1
+namespace RecipeMaster1.Entities
 {
     using Microsoft.VisualBasic.CompilerServices;
     using Newtonsoft.Json.Converters;
+    using Transformations;
 
     public class Recipe : RecipeEntity
     {
@@ -17,9 +18,28 @@ namespace RecipeMaster1
 
         public Measure Measure { get; set; }
 
+        public Texture Texture { get; set; }
+        public RecipeType RecipeType { get; set; }
+
         public string GenerateDetailedDescription()
         {
             return string.Empty;
+        }
+
+        public override List<Flavor> Flavors {
+            get
+            {
+                HashSet<string> flavors = new HashSet<string>();
+                foreach (var component in SubComponents)
+                {
+                    foreach (var flavor in component.Flavors)
+                    {
+                        flavors.Add(flavor);
+                    }
+                }
+
+                return flavors;
+            };
         }
 
         public override Measure GetMeasure()

@@ -2,7 +2,10 @@
 //    Copyright (c) Microsoft Corporation. All rights reserved.
 // </copyright>
 
-namespace RecipeMaster1;
+namespace RecipeMaster1.Entities;
+
+using Newtonsoft.Json;
+using Transformations;
 
 public abstract class RecipeEntity
 {
@@ -11,6 +14,9 @@ public abstract class RecipeEntity
     public string Name { get; set; }
 
     public string Description { get; set; }
+
+    [JsonIgnore]
+    public abstract List<Flavor> Flavors { get; }
 
     public abstract Measure GetMeasure();
 

@@ -3,10 +3,19 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using RecipeMaster1;
+using RecipeMaster1.Entities;
+using RecipeMaster1.Entities.Transformations;
 
 Console.WriteLine("Hello, World!");
 
-Ingredient flour = new Ingredient
+Flavor lemon = new Flavor()
+{
+    Id = "812f337d-88c7-4260-bd33-6a8951cee96f",
+    Name = "Lemon",
+    FlavorProperties = new List<FlavorProperty> { FlavorProperty.Acidic, FlavorProperty.Citrus };
+};
+
+    Ingredient flour = new Ingredient
 {
     Id = "14d1f940-5476-45ff-8e8a-4893e068affa",
     Name = "Flour",
@@ -45,7 +54,8 @@ Ingredient lemonJuice = new Ingredient
 {
     Id = "824f1995-6e11-4459-ab44-8596800e0fb5",
     Name = "Lemon Juice",
-    UnitType = UnitType.Gram
+    UnitType = UnitType.Gram,
+    Flavors = new List<string>() { "812f337d-88c7-4260-bd33-6a8951cee96f" };
 };
 
 Recipe pastryDough = new Recipe()
@@ -114,6 +124,8 @@ Recipe lemonCurd = new Recipe()
 {
     Id = "f4e3d0b3-b85b-4b10-93bc-c2a6a5758395",
     Name = "Lemon Curd",
+    Texture = Texture.Cremeux,
+    RecipeType = RecipeType.Curd,
     Measure = new Measure()
     {
         UnitType = UnitType.Volume,
@@ -202,6 +214,11 @@ rm.Build();
 
 lemonTartRecipe2.PrintBasicRecipe();
 
+public enum FlavorProperty
+{
+    Acidic,
+    Citrus
+}
 
 
 //rm.PrintRecipe(lemonTartRecipe);
