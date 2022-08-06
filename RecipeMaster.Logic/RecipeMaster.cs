@@ -132,6 +132,9 @@ public class RecipeMaster
     {
         _db = db;
         m_entities = new Dictionary<string, RecipeEntity>();
+        Recipes = db.Recipes;
+        Ingredients = db.Ingredients;
+        Flavors = db.Flavors;
 
         foreach (var rcp in db.Recipes)
         {

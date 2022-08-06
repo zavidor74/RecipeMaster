@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RecipeMaster.Api;
 
 namespace RecipeMasterTool3
 {
@@ -28,6 +30,14 @@ namespace RecipeMasterTool3
             var db2 = RecipeMasterDatabase.RecipeMasterDatabase.LoadFrom("c:\\todelete\\recipemaster.json");
             RecipeMaster1.RecipeMaster.Instance.AttachDb(db2);
             lbRecipes.ItemsSource = db2.Recipes;
+
+            JsonRecipeMasterServer jsonRecipeMasterServer =
+                new JsonRecipeMasterServer("c:\\todelete\\recipemaster.json");
+            
+            RecipeDb recipeDb = new RecipeDb(jsonRecipeMasterServer);
+            
+            var rcpWnd = new RecipeBrowserWindow(recipeDb);
+            rcpWnd.ShowDialog();
         }
 
         private void lbRecipes_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -35,7 +45,7 @@ namespace RecipeMasterTool3
             var item = ItemsControl.ContainerFromElement(sender as ListBox, e.OriginalSource as DependencyObject) as ListBoxItem;
             if (item != null)
             {
-                var rcpWnd = new RecipeWindow(item.Content as Recipe);
+                var rcpWnd = new RecipeBrowserWindow(null);
                 rcpWnd.ShowDialog();
                 /*
                 var remoteRecipe = (item.Content as ComponentRef)?.RemoteEntity;
@@ -46,6 +56,40 @@ namespace RecipeMasterTool3
                     var c = b;
                 }*/
             }
+        }
+    }
+
+    public class RecipeDb
+    {
+        private readonly IRecipeMasterServer _recipeMasterServer;
+        private List<Recipe> _recipes;
+
+        public RecipeDb(IRecipeMasterServer recipeMasterServer)
+        {
+            _recipeMasterServer = recipeMasterServer;
+            _recipes = _recipeMasterServer.GetAllRecipes();
+        }
+
+        public IEnumerable Recipes
+        {
+            get
+            {
+                return _recipes;
+            }
+        }
+    }
+
+    public class JsonRecipeMasterServer : IRecipeMasterServer
+    {
+        public JsonRecipeMasterServer(string dbFile)
+        {
+            var db2 = RecipeMasterDatabase.RecipeMasterDatabase.LoadFrom("c:\\todelete\\recipemaster.json");
+            RecipeMaster1.RecipeMaster.Instance.AttachDb(db2);
+        }
+
+        public List<Recipe> GetAllRecipes()
+        {
+            return RecipeMaster1.RecipeMaster.Instance.Recipes;
         }
     }
 }

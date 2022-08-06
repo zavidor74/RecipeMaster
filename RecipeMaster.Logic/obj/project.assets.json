@@ -86,23 +86,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zavidor\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\zavidor.MIDDLEEAST\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zavidor\\source\\repos\\RecipeMaster1\\RecipeMaster.Logic\\RecipeMaster.Logic.csproj",
+      "projectUniqueName": "C:\\Users\\zavidor.MIDDLEEAST\\source\\repos\\RecipeMaster1\\RecipeMaster.Logic\\RecipeMaster.Logic.csproj",
       "projectName": "RecipeMaster.Logic",
-      "projectPath": "C:\\Users\\zavidor\\source\\repos\\RecipeMaster1\\RecipeMaster.Logic\\RecipeMaster.Logic.csproj",
-      "packagesPath": "C:\\Users\\zavidor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zavidor\\source\\repos\\RecipeMaster1\\RecipeMaster.Logic\\obj\\",
+      "projectPath": "C:\\Users\\zavidor.MIDDLEEAST\\source\\repos\\RecipeMaster1\\RecipeMaster.Logic\\RecipeMaster.Logic.csproj",
+      "packagesPath": "C:\\Users\\zavidor.MIDDLEEAST\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zavidor.MIDDLEEAST\\source\\repos\\RecipeMaster1\\RecipeMaster.Logic\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\zavidor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\zavidor.MIDDLEEAST\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -110,22 +106,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "c:\\wcdrepos\\Cloud.CoreInfra\\Microsoft.Wcd.SevilleCloud.PasswordRemoval\\bin\\Debug": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://microsoft.pkgs.visualstudio.com/_packaging/WDATP/nuget/v3/index.json": {},
-        "https://microsoft.pkgs.visualstudio.com/_packaging/Wcd.Cloud/nuget/v3/index.json": {},
-        "https://msazure.pkgs.visualstudio.com/_packaging/CredScanSDK/nuget/v3/index.json": {},
-        "https://securitytools.pkgs.visualstudio.com/_packaging/Guardian/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\zavidor\\source\\repos\\RecipeMaster1\\RecipeMaster.Engine\\RecipeMaster.Entities.csproj": {
-              "projectPath": "C:\\Users\\zavidor\\source\\repos\\RecipeMaster1\\RecipeMaster.Engine\\RecipeMaster.Entities.csproj"
+            "C:\\Users\\zavidor.MIDDLEEAST\\source\\repos\\RecipeMaster1\\RecipeMaster.Engine\\RecipeMaster.Entities.csproj": {
+              "projectPath": "C:\\Users\\zavidor.MIDDLEEAST\\source\\repos\\RecipeMaster1\\RecipeMaster.Engine\\RecipeMaster.Entities.csproj"
             },
-            "C:\\Users\\zavidor\\source\\repos\\RecipeMaster1\\RecipeMasterDatabase\\RecipeMasterDatabase.csproj": {
-              "projectPath": "C:\\Users\\zavidor\\source\\repos\\RecipeMaster1\\RecipeMasterDatabase\\RecipeMasterDatabase.csproj"
+            "C:\\Users\\zavidor.MIDDLEEAST\\source\\repos\\RecipeMaster1\\RecipeMasterDatabase\\RecipeMasterDatabase.csproj": {
+              "projectPath": "C:\\Users\\zavidor.MIDDLEEAST\\source\\repos\\RecipeMaster1\\RecipeMasterDatabase\\RecipeMasterDatabase.csproj"
             }
           }
         }

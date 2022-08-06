@@ -7,8 +7,8 @@ using RecipeMaster1.Entities;
 using RecipeMaster1.Entities.Transformations;
 
 
-//RecipeMasterDatabase.RecipeMasterDatabase db = PlayWithRecipeMaster.TestHelpers.GenerateAdHocDb();
-//db.SaveTo("c:\\todelete\\recipemaster.json");
+RecipeMasterDatabase.RecipeMasterDatabase db = PlayWithRecipeMaster.TestHelpers.GenerateAdHocDb();
+db.SaveTo("c:\\todelete\\recipemaster.json");
 
 var db2 = RecipeMasterDatabase.RecipeMasterDatabase.LoadFrom("c:\\todelete\\recipemaster.json");
 RecipeMaster1.RecipeMaster.Instance.AttachDb(db2);

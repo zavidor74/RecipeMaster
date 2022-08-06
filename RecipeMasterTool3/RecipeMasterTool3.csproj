@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RecipeMaster.Api\RecipeMaster.Api.csproj" />
     <ProjectReference Include="..\RecipeMaster.Logic\RecipeMaster.Logic.csproj" />
     <ProjectReference Include="..\RecipeMasterDatabase\RecipeMasterDatabase.csproj" />
   </ItemGroup>
