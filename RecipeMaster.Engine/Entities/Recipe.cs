@@ -47,6 +47,31 @@ namespace RecipeMaster1.Entities
             }
         }
 
+        public override string FormattedProcess
+        {
+            get
+            {
+                if (Process == null || !Process.Any())
+                {
+                    return string.Empty;
+                }
+
+                StringBuilder sb = new StringBuilder();
+                foreach (var s in Process)
+                {
+                    string ss = s;
+                    foreach (var comp in SubComponents)
+                    {
+                        ss = ss.Replace("{" + comp.Id + "}", $"{comp.GetComponentName()}");
+                    }
+
+                    sb.AppendLine(ss);
+                }
+
+                return sb.ToString();
+            }
+        }
+
         public override Measure GetMeasure()
         {
             return Measure;

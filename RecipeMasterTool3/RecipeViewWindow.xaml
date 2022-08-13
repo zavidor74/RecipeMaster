@@ -10,7 +10,7 @@
         <Label Content="Recipe Page" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" />
         <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal">
             <Label Content="Name:"/>
-            <TextBox x:Name="txtName" Text="{Binding Path=Name}" />
+            <TextBox x:Name="txtName" Text="{Binding Path=Recipe.Name}" />
         </StackPanel>
         <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal">
             <Label Content="Target:"/>
@@ -27,6 +27,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <TextBlock x:Name="tbProcess" Height="200"  Text="{Binding Path=Recipe.FormattedProcess}" />
         <Button Content="Button"/>
     </StackPanel>
 </Window>

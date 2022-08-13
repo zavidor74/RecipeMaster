@@ -4,6 +4,8 @@
 
 namespace RecipeMaster1.Entities;
 
+using System.Diagnostics;
+using System.Text;
 using Newtonsoft.Json;
 using Transformations;
 
@@ -23,6 +25,8 @@ public abstract class RecipeEntity
     public string TotalFlavorsAsString => string.Join(",", TotalFlavors);
 
     public abstract Measure GetMeasure();
+
+    public virtual string FormattedProcess { get; } = string.Empty;
 
     public virtual string GetComponentName()
     {

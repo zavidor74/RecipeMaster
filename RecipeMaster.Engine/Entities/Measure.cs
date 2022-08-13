@@ -18,7 +18,7 @@ public class Measure
     {
         get
         {
-            return $"{Amount} {UnitType}";
+            return UnitType == UnitType.Item ? Amount.ToString() : $"{Amount} {UnitType}";
         }
     }
 
