@@ -36,8 +36,11 @@ namespace RecipeMasterTool3
             
             RecipeDb recipeDb = new RecipeDb(jsonRecipeMasterServer);
             
-            var rcpWnd = new RecipeBrowserWindow(recipeDb);
-            rcpWnd.ShowDialog();
+            //var rcpWnd = new RecipeBrowserWindow(recipeDb);
+            //rcpWnd.ShowDialog();
+            var rcp = recipeDb.Recipes.Single(r => r.Name == "Lemon Tart");
+            RecipeViewWindow rvw = new RecipeViewWindow(rcp);
+            rvw.ShowDialog();
         }
 
         private void lbRecipes_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -70,7 +73,7 @@ namespace RecipeMasterTool3
             _recipes = _recipeMasterServer.GetAllRecipes();
         }
 
-        public IEnumerable Recipes
+        public IEnumerable<Recipe> Recipes
         {
             get
             {

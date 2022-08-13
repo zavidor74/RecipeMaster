@@ -34,6 +34,13 @@ public class ComponentRef : RecipeEntity
 
     public override string GetComponentName()
     {
-        return RemoteEntity.Name;
+        if (RemoteEntity is Ingredient)
+        {
+            return $"{GetMeasure().Description} {RemoteEntity.Name}";
+        }
+        else
+        {
+            return RemoteEntity.Name;
+        }
     }
 }
