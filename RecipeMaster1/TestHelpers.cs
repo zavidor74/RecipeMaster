@@ -68,7 +68,7 @@
                 Name = "Pastry dough",
                 Measure = new Measure()
                 {
-                    UnitType = UnitType.Volume,
+                    UnitType = UnitType.Cm3,
                     Amount = 400
                 },
                 SubComponents = new List<ComponentRef>
@@ -132,7 +132,7 @@
                 RecipeType = RecipeType.Curd,
                 Measure = new Measure()
                 {
-                    UnitType = UnitType.Volume,
+                    UnitType = UnitType.Cm3,
                     Amount = 200
                 },
                 SubComponents = new List<ComponentRef>

@@ -14,7 +14,7 @@ public class TartMeasure : Measure
 
     public TartMeasure()
     {
-        UnitType = global::RecipeMaster.Engine.Types.UnitType.Volume;
+        UnitType = global::RecipeMaster.Engine.Types.UnitType.Cm3;
     }
 
     [JsonIgnore]

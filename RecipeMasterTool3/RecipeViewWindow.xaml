@@ -13,7 +13,7 @@
             <TextBox x:Name="txtName" Text="{Binding Path=Recipe.Name}" />
         </StackPanel>
         <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal">
-            <Label Content="Target:"/>
+            <Label Content="Measure:"/>
             <TextBox x:Name="txtTarget" Text="{Binding Path=Recipe.Measure.Description, Mode=OneWay}" />
         </StackPanel>
         <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal">
