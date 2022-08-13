@@ -19,6 +19,8 @@ public abstract class RecipeEntity
     public abstract HashSet<string> TotalFlavors { get; }
 
     [JsonIgnore] public virtual string FinalName => Name;
+    
+    public string TotalFlavorsAsString => string.Join(",", TotalFlavors);
 
     public abstract Measure GetMeasure();
 

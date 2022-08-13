@@ -21,13 +21,20 @@ namespace RecipeMasterTool3
     /// </summary>
     public partial class RecipeViewWindow : Window
     {
-        private readonly Recipe _r;
+        private readonly RecipeDb _recipeDb;
 
-        public RecipeViewWindow(Recipe r)
+        public Recipe Recipe { get; }
+
+        public string TotalFlavorsAsString {
+            get => string.Join(",", Recipe.TotalFlavors.Select(id => _recipeDb.Flavors.Single(flv => flv.Id == id).Name));
+        }
+
+        public RecipeViewWindow(Recipe r, RecipeDb recipeDb)
         {
-            _r = r;
+            Recipe = r;
+            _recipeDb = recipeDb;
             InitializeComponent();
-            this.DataContext = r;
+            this.DataContext = this;
         }
 
         private void lstComponents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -38,7 +45,7 @@ namespace RecipeMasterTool3
                 var remoteRecipe = (item.Content as ComponentRef)?.RemoteEntity;
                 if (remoteRecipe != null && remoteRecipe is Recipe rcp)
                 {
-                    var rcpWnd = new RecipeViewWindow(rcp);
+                    var rcpWnd = new RecipeViewWindow(rcp, _recipeDb);
                     rcpWnd.ShowDialog();
                 }
             }

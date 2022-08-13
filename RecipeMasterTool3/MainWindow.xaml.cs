@@ -18,6 +18,7 @@ using RecipeMaster.Api;
 namespace RecipeMasterTool3
 {
     using RecipeMaster1.Entities;
+    using RecipeMaster1.Entities.Transformations;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -39,7 +40,7 @@ namespace RecipeMasterTool3
             //var rcpWnd = new RecipeBrowserWindow(recipeDb);
             //rcpWnd.ShowDialog();
             var rcp = recipeDb.Recipes.Single(r => r.Name == "Lemon Tart");
-            RecipeViewWindow rvw = new RecipeViewWindow(rcp);
+            RecipeViewWindow rvw = new RecipeViewWindow(rcp, recipeDb);
             rvw.ShowDialog();
         }
 
@@ -65,12 +66,18 @@ namespace RecipeMasterTool3
     public class RecipeDb
     {
         private readonly IRecipeMasterServer _recipeMasterServer;
+        
         private List<Recipe> _recipes;
+        
+        private List<Flavor> _flavors;
+
+        public List<Flavor> Flavors => _flavors;
 
         public RecipeDb(IRecipeMasterServer recipeMasterServer)
         {
             _recipeMasterServer = recipeMasterServer;
             _recipes = _recipeMasterServer.GetAllRecipes();
+            _flavors = _recipeMasterServer.GetAllFlavors();
         }
 
         public IEnumerable<Recipe> Recipes
@@ -93,6 +100,11 @@ namespace RecipeMasterTool3
         public List<Recipe> GetAllRecipes()
         {
             return RecipeMaster1.RecipeMaster.Instance.Recipes;
+        }
+
+        public List<Flavor> GetAllFlavors()
+        {
+            return RecipeMaster1.RecipeMaster.Instance.Flavors;
         }
     }
 }

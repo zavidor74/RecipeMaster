@@ -14,9 +14,13 @@
         </StackPanel>
         <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal">
             <Label Content="Target:"/>
-            <TextBox x:Name="txtTarget" Text="{Binding Path=Measure.Description, Mode=OneWay}" />
+            <TextBox x:Name="txtTarget" Text="{Binding Path=Recipe.Measure.Description, Mode=OneWay}" />
         </StackPanel>
-        <ListBox x:Name="lstComponents" ItemsSource="{Binding Path=SubComponents}" MouseDoubleClick="lstComponents_MouseDoubleClick">
+        <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal">
+            <Label Content="Flavors:"/>
+            <TextBox x:Name="txtFlavors" Text="{Binding Path=TotalFlavorsAsString, Mode=OneWay}" />
+        </StackPanel>
+        <ListBox x:Name="lstComponents" ItemsSource="{Binding Path=Recipe.SubComponents}" MouseDoubleClick="lstComponents_MouseDoubleClick">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Path=FinalName}" />
